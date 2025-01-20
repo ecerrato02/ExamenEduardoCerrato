@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.exameneduardocerrato.Adapter.MobleAdapter
 import com.example.exameneduardocerrato.MVVM.LlistarViewModel
@@ -30,10 +31,10 @@ class MoblesFragment : Fragment() {
         llistarViewModel = ViewModelProvider(this).get(LlistarViewModel::class.java)
         llistarViewModel.llistarMoble(requireContext())
 
-        binding.moblesRecycler.layoutManager = LinearLayoutManager(requireContext())
+        binding.mobleRecycler.layoutManager = LinearLayoutManager(requireContext())
 
         llistarViewModel.llista_moble?.observe(viewLifecycleOwner, Observer { moblellista ->
-            binding.moblesRecycler.adapter = MobleAdapter(moblellista)
+            binding.mobleRecycler.adapter = MobleAdapter(moblellista)
             Toast.makeText(requireContext(), "$moblellista", Toast.LENGTH_SHORT).show()
         })
 

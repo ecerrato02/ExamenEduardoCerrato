@@ -17,7 +17,7 @@ class MobleAdapter(private val mList: List<Mobles>) : RecyclerView.Adapter<Moble
         // inflates the card_view_design view
         // that is used to hold list item
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.mobles_recycler, parent, false)
+            .inflate(R.layout.mobles_card_view, parent, false)
 
         return ViewHolder(view)
     }
