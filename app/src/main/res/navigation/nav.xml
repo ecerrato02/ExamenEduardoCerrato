@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/moblesFragment">
+
+    <fragment
+        android:id="@+id/moblesFragment"
+        android:name="com.example.exameneduardocerrato.MoblesFragment"
+        android:label="fragment_mobles"
+        tools:layout="@layout/fragment_mobles" >
+        <action
+            android:id="@+id/action_moblesFragment_to_afegirMobleFragment"
+            app:destination="@id/afegirMobleFragment"
+            app:popUpTo="@id/afegirMobleFragment" />
+        <action
+            android:id="@+id/action_moblesFragment_to_contactesFragment2"
+            app:destination="@id/contactesFragment"
+            app:popUpTo="@id/afegirMobleFragment" />
+        <action
+            android:id="@+id/action_moblesFragment_to_actualitzarMobleFragment"
+            app:destination="@id/actualitzarMobleFragment"
+            app:popUpTo="@id/moblesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactesFragment"
+        android:name="com.example.exameneduardocerrato.ContactesFragment"
+        android:label="fragment_contactes"
+        tools:layout="@layout/fragment_contactes" />
+    <fragment
+        android:id="@+id/afegirMobleFragment"
+        android:name="com.example.exameneduardocerrato.AfegirMobleFragment"
+        android:label="fragment_afegir_moble"
+        tools:layout="@layout/fragment_afegir_moble" />
+    <fragment
+        android:id="@+id/actualitzarMobleFragment"
+        android:name="com.example.exameneduardocerrato.ActualitzarMobleFragment"
+        android:label="fragment_actualitzar_moble"
+        tools:layout="@layout/fragment_actualitzar_moble" />
+</navigation>
