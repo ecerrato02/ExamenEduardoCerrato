@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/mobles"
+    <item android:id="@+id/moblesFragment"
         android:title="Mobles"/>
-    <item android:id="@+id/contactes"
+    <item android:id="@+id/contactesFragment"
         android:title="Contactes"/>
 </menu>

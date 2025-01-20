@@ -10,18 +10,6 @@
         android:name="com.example.exameneduardocerrato.MoblesFragment"
         android:label="fragment_mobles"
         tools:layout="@layout/fragment_mobles" >
-        <action
-            android:id="@+id/action_moblesFragment_to_afegirMobleFragment"
-            app:destination="@id/afegirMobleFragment"
-            app:popUpTo="@id/afegirMobleFragment" />
-        <action
-            android:id="@+id/action_moblesFragment_to_contactesFragment2"
-            app:destination="@id/contactesFragment"
-            app:popUpTo="@id/afegirMobleFragment" />
-        <action
-            android:id="@+id/action_moblesFragment_to_actualitzarMobleFragment"
-            app:destination="@id/actualitzarMobleFragment"
-            app:popUpTo="@id/moblesFragment" />
     </fragment>
     <fragment
         android:id="@+id/contactesFragment"

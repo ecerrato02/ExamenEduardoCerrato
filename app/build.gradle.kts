@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     //PLUGIN PER AL KSP
     id("com.google.devtools.ksp") version "1.9.20-1.0.14"
+
 }
 
 android {
@@ -42,6 +43,11 @@ android {
 
 dependencies {
 
+    val nav_version = "2.7.5"
+
+
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -49,9 +55,20 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+
+    //Room
     implementation(libs.androidx.room.common)
     implementation(libs.androidx.room.ktx)
+
+//    implementation(libs.androidx.room.runtime)
+    ksp("androidx.room:room-compiler:2.6.1")
+//    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // implementation(libs.androidx.room.runtime)
+    // ksp(libs.androidx.room.compiler)
 }

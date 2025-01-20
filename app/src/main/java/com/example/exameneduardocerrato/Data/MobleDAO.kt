@@ -18,8 +18,8 @@ interface MobleDAO {
     @Query("SELECT * FROM Moble ORDER BY moble_name DESC")
     fun obtenirMobles(): LiveData<List<Mobles>>
 
-    // Actualiztar Moble
-    @Query("")
-    fun actualitzarMoble(): LiveData<List<Mobles>>
+//    // Actualiztar Moble
+//    @Query("")
+//    fun actualitzarMoble(): LiveData<List<Mobles>>
 
 }

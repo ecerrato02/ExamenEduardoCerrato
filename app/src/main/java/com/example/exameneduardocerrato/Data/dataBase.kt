@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 
 @Database(
     entities = [Mobles::class],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 
@@ -35,8 +35,7 @@ abstract class dataBase : RoomDatabase() {
                 context.applicationContext,
                 dataBase::class.java,
                 "moble_database"
-            )
-//                .createFromAsset("databases/alumnes_database.db")
+            ).createFromAsset("databases/moble_database.db")
                 .build()
         }
     }

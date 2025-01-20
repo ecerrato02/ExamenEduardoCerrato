@@ -25,13 +25,13 @@ class MobleAdapter(private val mList: List<Mobles>) : RecyclerView.Adapter<Moble
     // binds the list items to a view
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        val alumne = mList[position]
+        val moble = mList[position]
 
-        holder.textViewNom.text = alumne.nombre
-        holder.textViewEdat.text = alumne.precio.toString()
+        holder.textViewNom.text = moble.nombre
+        holder.textViewEdat.text = moble.precio.toString()
 
         holder.layoutPulsar.setOnClickListener{view ->
-                view.findNavController().navigate(R.id.action_moblesFragment_to_actualitzarMobleFragment)
+                view.findNavController().navigate(R.id.actualitzarMobleFragment)
         }
     }
 
@@ -44,7 +44,7 @@ class MobleAdapter(private val mList: List<Mobles>) : RecyclerView.Adapter<Moble
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
         val textViewNom: TextView = itemView.findViewById(R.id.textViewNomMoble)
         val textViewEdat: TextView = itemView.findViewById(R.id.textViewPreu)
-        val layoutPulsar : LinearLayout = itemView.findViewById(R.id.layoutMobles)
+        val layoutPulsar: LinearLayout = itemView.findViewById(R.id.layoutMobles)
 
     }
 }

@@ -9,10 +9,8 @@ import androidx.room.PrimaryKey
 data class Mobles(
     @ColumnInfo(name = "moble_name")
     var nombre: String,
-
     @ColumnInfo(name = "moble_price")
     var precio: Int,
-
 ){
     @PrimaryKey(autoGenerate = true)
     var id: Int?=null
