@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import com.example.exameneduardocerrato.Data.Mobles
 import com.example.exameneduardocerrato.Data.Repository
 
-class LlistarMobles : ViewModel() {
+class LlistarViewModel : ViewModel() {
 
     // MutableLiveData!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     private var _llista_moble: LiveData<List<Mobles>>?=null

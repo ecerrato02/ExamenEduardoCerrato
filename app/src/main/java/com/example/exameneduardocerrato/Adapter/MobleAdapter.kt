@@ -42,9 +42,8 @@ class MobleAdapter(private val mList: List<Mobles>) : RecyclerView.Adapter<Moble
 
     // Holds the views for adding it to image and text
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
-        val textViewNom: TextView = itemView.findViewById(R.id.textViewNomMoble)
-        val textViewEdat: TextView = itemView.findViewById(R.id.textViewPreu)
+        val textViewNom: TextView = itemView.findViewById(R.id.textViewNomMobleCanvi)
+        val textViewEdat: TextView = itemView.findViewById(R.id.textViewPreuCanvi)
         val layoutPulsar: LinearLayout = itemView.findViewById(R.id.layoutMobles)
-
     }
 }
